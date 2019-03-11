@@ -103,20 +103,20 @@ class Blockchain {
     }
 }
 
-let savjeeCoin = new Blockchain();
+let XCoin = new Blockchain();
 
 
-savjeeCoin.createTransaction(new Transaction('address1', 'address2', 100));
-savjeeCoin.createTransaction(new Transaction('address1', 'address2', 50));
+XCoin.createTransaction(new Transaction('address1', 'address2', 100));
+XCoin.createTransaction(new Transaction('address1', 'address2', 50));
 
 console.log("\n starting the miner ...");
-savjeeCoin.miningPendingTransactions('xaviers-address');
+XCoin.miningPendingTransactions('xaviers-address');
 
 
-console.log("\n Balance of Xavier is " + savjeeCoin.getBalanceOfAddress('xaviers-address'));
+console.log("\n Balance of Xavier is " + XCoin.getBalanceOfAddress('xaviers-address'));
 
 console.log("\n starting the miner again ...");
-savjeeCoin.miningPendingTransactions('xaviers-address');
+XCoin.miningPendingTransactions('xaviers-address');
 
 
-console.log("\n Balance of Xavier is " + savjeeCoin.getBalanceOfAddress('xaviers-address'));
+console.log("\n Balance of Xavier is " + XCoin.getBalanceOfAddress('xaviers-address'));

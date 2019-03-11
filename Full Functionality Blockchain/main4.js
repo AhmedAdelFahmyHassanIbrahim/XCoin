@@ -9,15 +9,15 @@ const myKey = ec.keyFromPrivate('474fe3cebc5183bab892dd31fbda80a0ec957b598823d23
 const myWalletAddress = myKey.getPublic('hex');
 
 
-let savjeeCoin = new Blockchain();
+let XCoin = new Blockchain();
 
 const tx1 = new Transaction(myWalletAddress, 'public key goes here', 10);
 tx1.signTransaction(myKey);
-savjeeCoin.addTransaction(tx1);
+XCoin.addTransaction(tx1);
 
 
 console.log("\n starting the miner ...");
-savjeeCoin.miningPendingTransactions(myWalletAddress);
+XCoin.miningPendingTransactions(myWalletAddress);
 
 
-console.log("\n Balance of Xavier is " + savjeeCoin.getBalanceOfAddress(myWalletAddress));
+console.log("\n Balance of Xavier is " + XCoin.getBalanceOfAddress(myWalletAddress));
